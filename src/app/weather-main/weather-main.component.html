@@ -1,0 +1,78 @@
+<div *ngIf="weatherData | async as weather">
+  <div class="background-wrap">
+
+    <div *ngIf="weather.currently.icon == 'wind'">
+      <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
+        <source src="/assets/windygrassnoaudio.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div *ngIf="weather.currently.icon == 'clear-day'">
+      <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
+        <source src="/assets/clearDay.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div *ngIf="weather.currently.icon == 'clear-night'">
+      <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
+        <source src="/assets/clearNight.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div *ngIf="weather.currently.icon == 'rain'">
+      <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
+        <source src="/assets/raindrops_on_a_window.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div *ngIf="weather.currently.icon == 'snow'">
+      <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
+        <source src="/assets/snow.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div *ngIf="weather.currently.icon == 'sleet'">
+      <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
+        <source src="/assets/Beautiful Moon Rises through Night Clouds.mp4" type="video/mp4">
+      </video>
+    </div>
+       <div *ngIf="weather.currently.icon == 'fog'">
+      <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
+        <source src="/assets/fog.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div *ngIf="weather.currently.icon == 'cloudy'">
+      <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
+        <source src="/assets/Beautiful Moon Rises through Night Clouds.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div *ngIf="weather.currently.icon == 'partly-cloudy-day'">
+      <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
+        <source src="/assets/Beautiful Moon Rises through Night Clouds.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div *ngIf="weather.currently.icon == 'hail'">
+      <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
+        <source src="/assets/Beautiful Moon Rises through Night Clouds.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div *ngIf="weather.currently.icon == 'thunderstorm'">
+      <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
+        <source src="/assets/Beautiful Moon Rises through Night Clouds.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div *ngIf="weather.currently.icon == 'tornado'">
+      <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
+        <source src="/assets/Beautiful Moon Rises through Night Clouds.mp4" type="video/mp4">
+      </video>
+    </div>
+
+
+  </div>
+<div>
+  
+</div>
+  <div class="content">
+      <img src="/assets/weatherbuddy3.png" style="width:500px">
+    <h4>Date: {{weather.currently.time * 1000 | date}}</h4>
+    <h4>Current status: {{weather.currently.icon}}</h4>
+  </div>
+</div>
+<footer style="position: absolute; bottom: 5px; background-color: white; text-align: center">
+    <p>Copyright © 2018 All rights reserved.</p>
+</footer>
